@@ -1,0 +1,238 @@
+@charset "utf-8";
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+b,
+strong {
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+  vertical-align: top;
+  border: 0;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  height: auto;
+}
+
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type='date']{
+  outline: none;
+  background: url(./assets/icon-calendar.png) no-repeat right center;
+  background-size: 20px auto;
+}
+input[type='date']::-webkit-clear-button,
+input[type='date']::-webkit-inner-spin-button{
+  display: none;
+}
+input[type='date']::-webkit-calendar-picker-indicator{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: transparent;
+  cursor: pointer;
+}
+input[type='date']::before{
+  content: attr(data-placeholder);
+  width: 100%;
+}
+input[type='date']:valid::before{
+  display: none;
+}
+input[data-placeholder]::before{
+  color: #999;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+textarea {
+  overflow: auto;
+}
+
+table {
+  width:100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+legend {
+  position: absolute;
+  z-index: -1;
+  border: 0;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+caption {
+  z-index: -1;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Malgun Gothic', 'Helvetica', 'Apple-Gothic', '애플고딕',
+    'Tahoma', dotum, '돋움', gulim, '굴림', sans-serif;
+  color: #333;
+  font-weight: normal;
+  font-size: 14px;
+  background: #f4f4f4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+label.placeholder {
+  letter-spacing: 0;
+}
+input::-webkit-input-placeholder {
+  color: #999;
+  letter-spacing: 0;
+}
+
+button {
+  vertical-align: top;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+*{
+    box-sizing: border-box;
+}
