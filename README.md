@@ -20,7 +20,7 @@
 
 ## 📼 DEMO
 
-- <a href="https://drive.google.com/file/d/1sr9AYUvoBWJj7zTqeNw9GhtGR-FTToP4/view?usp=share_link" target="_blank">📎 시연 영상</a>
+- <a href="https://drive.google.com/file/d/1sr9AYUvoBWJj7zTqeNw9GhtGR-FTToP4/view?usp=share_link" :target="_blank">📎 시연 영상</a>
 
 ## 🙎‍♀️ Team
 
@@ -84,7 +84,7 @@ axios.get(`${process.env.VUE_APP_TEST_SERVER}scheduler?idx=${campaign_idx})
 
 ## 회고 및 느낀점
 
-- <a href="https://blog.naver.com/zhwltlr/222978509678" target="_blank">📎기업협업 회고</a>
+- <a href="https://blog.naver.com/zhwltlr/222978509678" :target="_blank">📎기업협업 회고</a>
 
 - S3에 저장된 이미지를 다운로드 하는 기능을 구현하지 못한 것이 아쉽다.
 
