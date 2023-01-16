@@ -105,7 +105,7 @@ export default {
           }
         )
         .then((res) => {
-          this.test =
+          this.file =
             "data:image/png;base64," +
             btoa(unescape(encodeURIComponent(res.data)));
         });
