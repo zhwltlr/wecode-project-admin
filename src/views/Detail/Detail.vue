@@ -58,7 +58,7 @@
               <p v-for="(rank, i) in list.rank">
                 <a
                   target="_blank"
-                  :href="`http://3.36.103.222:80/scheduler/image?bucketPath=${list.bucket_path}`"
+                  :href="`${process.env.VUE_APP_TEST_SERVER}scheduler/image?bucketPath=${list.bucket_path}`"
                   >보기</a
                 >
                 <button type="button">다운로드</button>
@@ -96,11 +96,14 @@ export default {
     },
     openUrl(i) {
       axios
-        .get(`http://10.58.52.99:3001/scheduler/image?bucketPath=${i}`, {
-          headers: {
-            authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        })
+        .get(
+          `${process.env.VUE_APP_TEST_SERVER}scheduler/image?bucketPath=${i}`,
+          {
+            headers: {
+              authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        )
         .then((res) => {
           this.test =
             "data:image/png;base64," +
@@ -124,7 +127,7 @@ export default {
   created() {
     const index = this.$route.params.camIdx;
     axios
-      .get(`http://3.36.103.222:80/scheduler?idx=${index}`, {
+      .get(`${process.env.VUE_APP_TEST_SERVER}scheduler?idx=${index}`, {
         headers: {
           authorization: `Bearer ${localStorage.getItem("token")}`,
         },

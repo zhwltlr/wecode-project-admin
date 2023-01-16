@@ -206,7 +206,7 @@ export default {
       this.isLoading = true;
       const inpData = this.inpData;
       axios
-        .get(`http://3.36.103.222:80/campaign/${inpData}`, {
+        .get(`${process.env.VUE_APP_TEST_SERVER}${inpData}`, {
           headers: {
             authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -232,7 +232,7 @@ export default {
     sendNewJob() {
       axios
         .post(
-          "http://3.36.103.222:80/scheduler",
+          `${process.env.VUE_APP_TEST_SERVER}/scheduler`,
           {
             campaign_idx: this.inpData,
             startDay: this.startDay,
@@ -258,7 +258,7 @@ export default {
     sendModifyJob() {
       axios
         .patch(
-          `http://3.36.103.222:80/scheduler/${this.idxData[0][0].idx}`,
+          `${process.env.VUE_APP_TEST_SERVER}${this.idxData[0][0].idx}`,
           {
             startDay: this.start_day,
             endDay: this.end_day,
@@ -286,11 +286,14 @@ export default {
       this.isLoading = true;
       const campaign_idx = this.$route.params.camIdx;
       axios
-        .get(`http://3.36.103.222:80/scheduler?idx=${campaign_idx}`, {
-          headers: {
-            authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        })
+        .get(
+          `${process.env.VUE_APP_TEST_SERVER}scheduler?idx=${campaign_idx}`,
+          {
+            headers: {
+              authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        )
         .then((res) => {
           this.idxData.push(res.data);
           this.keyword = this.idxData[0][0].keyword?.split(",");

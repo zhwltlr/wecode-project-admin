@@ -180,7 +180,7 @@ export default {
     deleteIdx(i) {
       axios
         .delete(
-          `http://3.36.103.222:80/scheduler/${this.campaignData[i].idx}`,
+          `${process.env.VUE_APP_TEST_SERVER}scheduler/${this.campaignData[i].idx}`,
           {
             headers: {
               authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -214,9 +214,6 @@ export default {
         name: "Register",
       });
     },
-    activeFilter() {
-      return searchFilter;
-    },
     input(e) {
       return (this.inputText = e.target.value);
     },
@@ -242,7 +239,7 @@ export default {
   },
   created() {
     axios
-      .get("http://3.36.103.222:80/scheduler", {
+      .get(`${process.env.VUE_APP_TEST_SERVER}scheduler`, {
         headers: {
           authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -259,6 +256,7 @@ export default {
           return data[`${this.selected.name}`] == this.search_value;
         });
       } else {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.isLoading = false;
         return this.campaignData;
       }

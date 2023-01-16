@@ -39,7 +39,7 @@ export default {
   methods: {
     loginSubmit() {
       axios
-        .post("https://api.tagby.io/auth/login/adm/", {
+        .post(process.env.VUE_APP_COMPANY_SERVER, {
           email: this.email,
           password: this.password,
         })
@@ -47,7 +47,7 @@ export default {
           if (res.data.msg == "Success") {
             localStorage.setItem("token", res.data.data.access_token.token);
             axios
-              .get("http://3.36.103.222:80/scheduler", {
+              .get(`${process.env.VUE_APP_TEST_SERVER}sheduler`, {
                 headers: {
                   authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
