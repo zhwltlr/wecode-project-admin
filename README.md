@@ -18,11 +18,11 @@
   - 검색결과 창에 인플루언서의 포스팅이 있을 경우 해당 페이지를 캡쳐하고, 이 데이터를 모아 상부에 보고한다.
   - <b>매니저 X의 수고를 덜어주기 위해 크롤링한 데이터를 볼 수 있게 하는 페이지 제작하였다.</b>
 
-## 📼 DEMO
+## DEMO
 
 - <a href="https://drive.google.com/file/d/1sr9AYUvoBWJj7zTqeNw9GhtGR-FTToP4/view?usp=share_link" :target="_blank">📎 시연 영상</a>
 
-## 🙎‍♀️ Team
+## Team
 
 `FE` 2명 <br>
 `BE` 2명
@@ -73,9 +73,9 @@ axios.get(`${process.env.VUE_APP_TEST_SERVER}scheduler?idx=${campaign_idx})
 
 ## Engineering Stack
 
-- 💻 FE:
+- FE:
   - `JavaScript`, `Vue.js`, `AWS`
-- 💻 BE:
+- BE:
   - `JavaScript`, `Node.js`, `AWS`, `MySql`
 
 <br />
