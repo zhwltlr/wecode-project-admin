@@ -112,7 +112,6 @@ export default {
       let koreaNow = new Date(
         new Date(time).getTime() + KR_TIME_DIFF
       ).toISOString();
-      console.log(koreaNow);
       if (num == 1) {
         let koreanTime = String(koreaNow).split("T")[num].split(".")[0];
         return koreanTime;
@@ -131,7 +130,6 @@ export default {
         },
       })
       .then((res) => {
-        console.log(res.data);
         this.detailData = res.data;
       });
   },

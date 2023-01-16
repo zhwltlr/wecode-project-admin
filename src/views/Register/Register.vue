@@ -212,7 +212,6 @@ export default {
           },
         })
         .then((res) => {
-          console.log(res.data);
           this.idxData.push(res.data);
           this.isLoading = false;
           this.camTitle = this.idxData[0].title;
@@ -231,7 +230,6 @@ export default {
       this.keyword.splice(i, 1);
     },
     sendNewJob() {
-      console.log(this.startDay, this.endDay);
       axios
         .post(
           "http://3.36.103.222:80/scheduler",
@@ -248,7 +246,6 @@ export default {
           }
         )
         .then((res) => {
-          console.log(res);
           if (res.data == "post success!") {
             this.$router.push({
               name: "List",
@@ -259,7 +256,6 @@ export default {
         });
     },
     sendModifyJob() {
-      console.log(this.start_day, this.end_day);
       axios
         .patch(
           `http://3.36.103.222:80/scheduler/${this.idxData[0][0].idx}`,
@@ -275,7 +271,6 @@ export default {
           }
         )
         .then((res) => {
-          console.log(res);
           if (res.data.message == "patch success") {
             this.$router.push({
               name: "List",
@@ -297,7 +292,6 @@ export default {
           },
         })
         .then((res) => {
-          console.log(res.data);
           this.idxData.push(res.data);
           this.keyword = this.idxData[0][0].keyword?.split(",");
           this.isLoading = false;
